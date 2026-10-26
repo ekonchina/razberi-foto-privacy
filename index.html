@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Политика конфиденциальности Android-приложения «Разбери фото»: доступ к фотографиям, хранение прогресса и удаление данных.">
+  <meta name="theme-color" content="#123864">
+  <meta name="referrer" content="no-referrer">
+  <title>Политика конфиденциальности — Разбери фото</title>
+  <style>
+    :root { color-scheme: light; --ink: #172b43; --muted: #52657a; --blue: #174e89; --line: #dbe4ee; }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 24px; }
+    body { margin: 0; background: #f5f8fc; color: var(--ink); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 17px; line-height: 1.75; }
+    a { color: var(--blue); text-underline-offset: .2em; overflow-wrap: anywhere; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid #137b91; outline-offset: 5px; border-radius: 2px; }
+    .skip { position: absolute; top: -100px; left: 16px; background: white; padding: 8px 16px; z-index: 2; }
+    .skip:focus { top: 12px; }
+    .wrap { width: min(100% - 48px, 850px); margin-inline: auto; }
+    header { padding: 44px 0 32px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-size: 19px; font-weight: 700; letter-spacing: -.02em; }
+    .mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 11px; background: #123864; color: #b8f1e8; font-size: 24px; line-height: 1; }
+    .eyebrow { color: var(--muted); font-size: 14px; margin: 30px 0 10px; }
+    h1 { max-width: 720px; font-size: clamp(30px, 5.6vw, 48px); line-height: 1.16; letter-spacing: -.035em; margin: 0 0 22px; overflow-wrap: break-word; }
+    .intro { max-width: 690px; margin: 0; font-size: 19px; color: var(--muted); }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 24px; color: var(--muted); font-size: 14px; }
+    main { padding: 0 0 40px; }
+    .summary { background: #e8f3f1; border-left: 4px solid #277a70; border-radius: 0 12px 12px 0; padding: 22px 26px; margin-bottom: 32px; }
+    .summary p { margin: 0; }
+    .paper { padding: 12px 40px 34px; background: #fff; border: 1px solid var(--line); border-radius: 18px; }
+    section { padding-top: 28px; }
+    section + section { margin-top: 28px; border-top: 1px solid var(--line); }
+    h2 { font-size: 23px; line-height: 1.35; letter-spacing: -.015em; margin: 0 0 16px; }
+    p { margin: 0 0 15px; }
+    p:last-child { margin-bottom: 0; }
+    ul { padding-left: 24px; margin: 12px 0 16px; }
+    li { margin: 8px 0; }
+    .notice { margin-top: 16px; padding: 15px 18px; border-radius: 10px; background: #f1f5fa; color: var(--muted); }
+    .small { font-size: 14px; color: var(--muted); }
+    footer { padding: 0 0 36px; font-size: 14px; color: var(--muted); }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+    @media (max-width: 600px) {
+      .wrap { width: min(100% - 32px, 850px); }
+      header { padding-top: 28px; }
+      .paper { padding: 0 20px 26px; border-radius: 14px; }
+      .summary { padding: 18px 20px; }
+      .intro { font-size: 17px; }
+      h2 { font-size: 21px; }
+    }
+    @media print {
+      body { background: white; color: #000; font-size: 11pt; }
+      .wrap { width: 100%; }
+      header { padding-top: 0; }
+      .paper { border: 0; padding: 0; }
+      .summary { background: none; border: 1px solid #aaa; }
+      footer, .skip { display: none; }
+      h1 { font-size: 28pt; }
+      h2 { break-after: avoid; }
+      p, li { orphans: 3; widows: 3; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#policy">Перейти к тексту политики</a>
+  <header class="wrap">
+    <div class="brand"><span class="mark" aria-hidden="true">↔</span>Разбери фото</div>
+    <p class="eyebrow">Android-приложение для разбора галереи</p>
+    <h1>Политика конфиденциальности</h1>
+    <p class="intro">Как приложение работает с фотографиями и сохраняет ваши решения.</p>
+    <div class="meta">
+      <span>Редакция от <time datetime="2026-10-26">26 октября 2026 года</time></span>
+      <span>Для версии 0.1.10</span>
+    </div>
+  </header>
+  <main id="policy" class="wrap">
+    <div class="summary">
+      <p><strong>Фотографии остаются на вашем устройстве.</strong> Версия 0.1.10 работает без регистрации и подключения к интернету. В ней нет рекламы, аналитики и отправки фотографий разработчику.</p>
+    </div>
+    <article class="paper" aria-label="Текст политики конфиденциальности">
+      <section id="developer">
+        <h2>1. О приложении и разработчике</h2>
+        <p>Эта политика описывает работу с данными в Android-приложении «Разбери фото» версии 0.1.10 (идентификатор пакета: <span style="overflow-wrap:anywhere">app.swipephoto.swipe_photo</span>).</p>
+        <p>Разработчик и лицо, ответственное за вопросы обработки данных: <strong>Кончина Екатерина Валерьевна</strong>.</p>
+        <p>Приложение помогает просматривать локальные фотографии, оставлять нужные и выбирать лишние для удаления. Оно не предоставляет облачное хранилище и не создаёт учётные записи.</p>
+      </section>
+      <section id="data">
+        <h2>2. Какие данные используются</h2>
+        <p>После предоставления разрешения приложение обрабатывает на устройстве:</p>
+        <ul>
+          <li><strong>Фотографии и их изображения для просмотра</strong> — чтобы показывать карточки, миниатюры и увеличенный снимок.</li>
+          <li><strong>Сведения о файлах</strong> — локальный идентификатор, имя, дату добавления в медиатеку и размер. Они нужны для загрузки фотографий, порядка просмотра и оценки размера выбранных файлов.</li>
+          <li><strong>Решения о сортировке</strong> — идентификаторы фотографий с отметками «оставить» или «на удаление». Они позволяют продолжать разбор после закрытия приложения.</li>
+        </ul>
+        <p>Приложение не запрашивает имя, номер телефона, email, платёжные данные, контакты, доступ к микрофону, камере или местоположению. В этой версии нет рекламного идентификатора, рекламных SDK, систем аналитики и автоматической отправки отчётов о сбоях.</p>
+      </section>
+      <section id="permissions">
+        <h2>3. Доступ к фотографиям</h2>
+        <p>Доступ предоставляется через системное окно Android и используется только для работы с галереей. В зависимости от версии Android приложение запрашивает разрешение на чтение изображений или файлов медиатеки; на Android 14 и новее можно предоставить доступ только к выбранным фотографиям.</p>
+        <p>Вы можете отказать в доступе или отозвать его в настройках Android: «Приложения» → «Разбери фото» → «Разрешения». Названия пунктов могут отличаться на разных устройствах. Без разрешения приложение не сможет показывать и сортировать фотографии.</p>
+        <p>Разрешение Android управляет доступом к файлам на устройстве и не означает согласия на отправку фотографий в интернет. Такой отправки в версии 0.1.10 нет.</p>
+      </section>
+      <section id="storage">
+        <h2>4. Где и как долго хранятся данные</h2>
+        <p>Исходные фотографии хранятся в вашей медиатеке. Для показа приложение загружает изображения и сведения о файлах в оперативную память. Постоянный отдельный архив фотографий приложение не создаёт.</p>
+        <p>Решения о сортировке сохраняются в локальном хранилище приложения до их изменения, очистки данных приложения или его удаления. Отзыв доступа к фотографиям сам по себе не очищает сохранённые решения. Автоматическое резервное копирование данных приложения средствами Android отключено.</p>
+        <p>У разработчика нет сервера с вашей галереей или прогрессом. Приложение не продаёт эти данные и не передаёт их разработчику, рекламным сетям или другим внешним сервисам.</p>
+      </section>
+      <section id="deletion">
+        <h2>5. Удаление фотографий и прогресса</h2>
+        <p>Свайп влево только добавляет фотографию в очередь на удаление. Сначала вы проверяете выбранные снимки, затем подтверждаете удаление в приложении и в системном окне Android. До подтверждения приложение не удаляет фотографии.</p>
+        <p>Чтобы удалить сохранённый прогресс, очистите данные «Разбери фото» в настройках Android или удалите приложение. Это уберёт локальные решения о сортировке, но само по себе не удалит фотографии из медиатеки.</p>
+        <p>Приложение не хранит резервные копии удалённых снимков и не предоставляет функцию их восстановления. Разработчик не может удалённо просматривать, изменять или восстанавливать вашу галерею.</p>
+      </section>
+      <section id="advertising">
+        <h2>6. Реклама и будущие изменения</h2>
+        <p>В версии 0.1.10 реклама не подключена. Эта редакция политики не описывает работу будущей версии с рекламой.</p>
+        <p>Если в приложение будет добавлена реклама Яндекса или другой сервис, политика будет обновлена до выпуска соответствующей версии: в ней будут указаны используемые сервисы, категории передаваемых данных, цели обработки и доступные пользователю настройки. Необходимые разрешения и согласия будут запрашиваться в предусмотренных случаях.</p>
+      </section>
+      <section id="website">
+        <h2>7. Посещение этой страницы</h2>
+        <p>Страница политики размещена на GitHub Pages. На самой странице нет форм сбора данных, рекламных блоков, внешних шрифтов, скриптов аналитики или собственного использования cookies.</p>
+        <p>При открытии страницы браузер обращается к серверам GitHub. По документации GitHub Pages, сервис регистрирует и хранит IP-адрес посетителя в целях безопасности. Это относится к посещению сайта, а не к локальному разбору фотографий в приложении.</p>
+        <p>Подробнее: <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">обработка данных в GitHub Pages</a> и <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">политика конфиденциальности GitHub</a>.</p>
+      </section>
+      <section id="contact">
+        <h2>8. Контакты</h2>
+        <p>Ответственное лицо: Кончина Екатерина Валерьевна.</p>
+        <p class="notice">Адрес электронной почты для поддержки и обращений по вопросам данных будет добавлен на эту страницу до публикации приложения в RuStore.</p>
+      </section>
+      <section id="updates">
+        <h2>9. Обновление политики</h2>
+        <p>Актуальная редакция публикуется по этому же адресу. Дата обновления и версия приложения, к которой относится документ, указаны в начале страницы. При изменении способов работы с данными содержание политики будет пересмотрено.</p>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <div class="wrap">
+      <span>Разбери фото · Кончина Екатерина Валерьевна</span>
+      <a href="#policy">К началу политики ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
+
