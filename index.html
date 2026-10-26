@@ -6,6 +6,8 @@
   <meta name="description" content="Политика конфиденциальности Android-приложения «Разбери фото»: доступ к фотографиям, хранение прогресса и удаление данных.">
   <meta name="theme-color" content="#123864">
   <meta name="referrer" content="no-referrer">
+  <link rel="icon" type="image/png" sizes="512x512" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
   <title>Политика конфиденциальности — Разбери фото</title>
   <style>
     :root { color-scheme: light; --ink: #172b43; --muted: #52657a; --blue: #174e89; --line: #dbe4ee; }
@@ -20,7 +22,7 @@
     .wrap { width: min(100% - 48px, 850px); margin-inline: auto; }
     header { padding: 44px 0 32px; }
     .brand { display: flex; align-items: center; gap: 12px; font-size: 19px; font-weight: 700; letter-spacing: -.02em; }
-    .mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 11px; background: #123864; color: #b8f1e8; font-size: 24px; line-height: 1; }
+    .mark { display: block; flex: 0 0 auto; width: 48px; height: 48px; border-radius: 12px; }
     .eyebrow { color: var(--muted); font-size: 14px; margin: 30px 0 10px; }
     h1 { max-width: 720px; font-size: clamp(30px, 5.6vw, 48px); line-height: 1.16; letter-spacing: -.035em; margin: 0 0 22px; overflow-wrap: break-word; }
     .intro { max-width: 690px; margin: 0; font-size: 19px; color: var(--muted); }
@@ -64,7 +66,7 @@
 <body>
   <a class="skip" href="#policy">Перейти к тексту политики</a>
   <header class="wrap">
-    <div class="brand"><span class="mark" aria-hidden="true">↔</span>Разбери фото</div>
+    <div class="brand"><img class="mark" src="icon.png" width="48" height="48" alt="">Разбери фото</div>
     <p class="eyebrow">Android-приложение для разбора галереи</p>
     <h1>Политика конфиденциальности</h1>
     <p class="intro">Как приложение работает с фотографиями и сохраняет ваши решения.</p>
